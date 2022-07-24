@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200&display=swap" rel="stylesheet">
+<title> Jimmy Bank | Transfer Money</title>
+<style>
+body{font-family: 'Cairo', sans-serif;}
+*{font-family: 'Cairo', sans-serif;}
+.logo{font-size:1.5em;font-weight:bold;color:white;background-color:red;display:flex;transition: all 1s;}
+.lis{background-color:gray;color:white;border: 1px solid;outline:none;border-color:gray;border-radius:25px;transition: .1s;}
+.tran{background-color:rgba(0,0,0,0.8);color:white;border: 1px solid;outline:none;border-color:white;border-radius:30px;}
+.lis:focus{background-color:white;color:black;border-color:black;}
+.tran:active{background-color:white;color:black;border-color:black;}
+.logo:hover{background-color:orange;color:white;border-radius:0px;}
+</style>
+<script>
+var c = 0;
+function transfer(){
+var chek = document.getElementById('chek').value;
+if(chek === "Jimmy" | chek === "jimmy" | chek === "jimmysprinkles" | chek === "JIMMY" | chek === "Jimmysprinkles4"){
+alert('Transfer completed.');
+window.location = "wm";
+}
+}
+function hint(){
+c++;
+if(c === 1){
+alert('Press for a clue');
+}
+if(c === 2){
+alert('Transfer money to jimmy.');
+c = 1;
+}
+}
+</script>
+</head>
+<body>
+<p onclick="hint()" class="logo"> Jimmy Bank</p>
+<br>
+<div style="text-align:center;">
+<h2> Transfer money</h2>
+<br>
+<form>
+<p> From:</p>
+<input class="lis" type="email" required>
+<br>
+<p> To:</p>
+<input class="lis" id="chek" type="search" required>
+<br><br>
+<button class="tran" onclick="transfer()"> Transfer</button>
+</form>
+</div>

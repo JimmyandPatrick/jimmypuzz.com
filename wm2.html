@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{font-family: "Segoe UI";}
+*{font-family: "Segoe UI";}
+</style>
+<script>
+var c = 0;
+function shockfunc(){
+c++;
+if(c === 10){
+window.location = "win";
+}
+document.getElementById('w').innerHTML = "🤯";
+document.getElementById('w2').innerHTML = "🤯";
+setTimeout(function(){
+document.getElementById('w').innerHTML = "Something is here.";
+document.getElementById('w2').innerHTML = "Why did you tell, guy above me?";
+},500);
+setTimeout(function(){
+document.getElementById('w').innerHTML = "Nothing is here!";
+document.getElementById('w2').innerHTML = "Yes nothing";
+},800);
+}
+</script>
+</head>
+<div style="text-align:center;" onclick="shockfunc()">
+<h1 id="w"> Nothing is here!</h1>
+<p id="w2" > Yes nothing</p>
+</div>
