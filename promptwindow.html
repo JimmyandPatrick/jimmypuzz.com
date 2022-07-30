@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<script>
+function sl(){
+var w = window.location.search;
+var a = w.split('?');
+var b = a.splice(1);
+document.getElementById('reason').innerHTML = "Because " + b;
+document.getElementById('hide').style.display = "none";
+}
+</script>
+<style>
+body{text-align:center;font-family: "Segoe UI";}
+*{text-align:center;font-family: "Segoe UI";}
+</style>
+<body>
+<h2> I love/hate juice wrld because:</h2>
+<p id="reason"></p>
+<button onclick="sl()" id="hide"> Why?</button>
